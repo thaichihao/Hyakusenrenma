@@ -14,3 +14,9 @@ Navigate to source base and run:
 Gulp
 ```
 
+#Step 2
+## There are 4 errors in _tags.sass file
+* The variable "$tag_plate_icon_color" is NOT assigned a value.
+* The variable "$deep_gray" is NOT assigned a value.
+* The property "font-color" is not exists.
+* Must use the content property to specify the content to insert.
