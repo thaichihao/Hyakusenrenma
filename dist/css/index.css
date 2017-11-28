@@ -12,22 +12,44 @@
   float: left;
   padding: 15px; }
 
+@media (max-width: 767px) {
+  /* For tablets: */
+  .col-sm-1 {
+    width: 8.33%; }
+  .col-sm-2 {
+    width: 16.66%; }
+  .col-sm-3 {
+    width: 25%; }
+  .col-sm-4 {
+    width: 33.33%; }
+  .col-sml-5 {
+    width: 41.66%; }
+  .col-sm-6 {
+    width: 50%; }
+  .col-sm-7 {
+    width: 58.33%; }
+  .col-sm-8 {
+    width: 66.66%; }
+  .col-sm-9 {
+    width: 75%; }
+  .col-sm-10 {
+    width: 83.33%; }
+  .col-sm-11 {
+    width: 91.66%; }
+  .col-sm-12 {
+    width: 100%; } }
+
 body {
   background-color: lightgrey;
   font-family: "Proxima Nova Soft", sans-serif;
   margin: 0; }
 
-img {
-  width: 100%;
-  background-size: 100% 100%;
-  z-index: 0; }
-
-#topic {
+.topic {
   text-align: center; }
 
-#content {
+.content {
   margin: 0 30px; }
-  #content h1 {
+  .content h1 {
     font-size: 2em;
     margin: 15px 5px 0 0; }
 
@@ -37,9 +59,10 @@ img {
   box-shadow: 1px 4px 9px rgba(0, 0, 0, 0.5);
   margin-bottom: 30px; }
 
-header {
-  position: relative; }
-  header span {
+.ct_header {
+  position: relative;
+  min-height: 147px; }
+  .ct_header .months {
     background-color: #f66951;
     color: white;
     font-weight: bolder;
@@ -49,46 +72,54 @@ header {
     border-radius: 87%;
     width: 13%;
     text-align: center;
-    height: 21%;
+    height: 25%;
     padding: 4px;
     box-sizing: content-box;
     right: 15px;
     top: 15px; }
-    header span time {
+    .ct_header .months .date {
       font-size: 5vw; }
-  header figcaption {
+  .ct_header .photo {
     background-color: tomato;
     color: white;
     font-weight: bold;
     width: 27%;
     position: absolute;
     z-index: 999;
-    bottom: 4px;
+    bottom: 0;
     font-size: 4vw;
     padding: 8px; }
 
-main {
+.articles {
   padding: 0 1.5em; }
-  main span {
+  .articles .titles {
     color: #f66951;
     font-weight: bolder; }
-  main p {
+  .articles .info {
     color: grey; }
 
-footer {
+.reactions {
   padding: 0 1.5em;
   color: grey; }
-  footer i {
+  .reactions .view {
     float: left;
     margin-right: 10px; }
 
-#fog {
-  background-color: black;
-  opacity: 0.2;
+.bg {
+  background-image: url("../../img/cropped.png");
+  height: 100%;
   position: absolute;
-  top: 0;
   width: 100%;
-  height: 98%; }
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .bg::after {
+    content: "";
+    background-color: black;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 99%; }
 
 * {
   box-sizing: border-box; }
@@ -126,16 +157,14 @@ footer {
     width: 100%; }
   .item {
     margin-left: 5.33%; }
-  header figcaption {
+  .ct_header .photo {
     font-size: 2vw; }
-  header span {
-    font-size: 1.4vw;
+  .ct_header .months {
+    font-size: 1vw;
     width: 15%;
-    height: 24%; }
-    header span time {
-      font-size: 3vw; }
-  header #fog {
-    height: 99%; } }
+    height: 33%; }
+    .ct_header .months .date {
+      font-size: 3vw; } }
 
 * {
   box-sizing: border-box; }
@@ -173,11 +202,50 @@ footer {
     width: 100%; }
   .item {
     margin-left: 5.33%; }
-  header figcaption {
+  .ct_header .photo {
     font-size: 1vw; }
-  header span {
+  .ct_header .months {
     font-size: 0.8vw;
     width: 17%;
-    height: 27%; }
-    header span time {
+    height: 35%; }
+    .ct_header .months .date {
       font-size: 2vw; } }
+
+* {
+  box-sizing: border-box; }
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+@media (min-width: 580px) and (max-width: 767px) {
+  /* For tablets: */
+  .col-ml-1 {
+    width: 8.33%; }
+  .col-ml-2 {
+    width: 16.66%; }
+  .col-ml-3 {
+    width: 25%; }
+  .col-ml-4 {
+    width: 33.33%; }
+  .col-ml-5 {
+    width: 41.66%; }
+  .col-ml-6 {
+    width: 50%; }
+  .col-ml-7 {
+    width: 58.33%; }
+  .col-ml-8 {
+    width: 66.66%; }
+  .col-ml-9 {
+    width: 75%; }
+  .col-ml-10 {
+    width: 83.33%; }
+  .col-ml-11 {
+    width: 91.66%; }
+  .col-ml-12 {
+    width: 100%; }
+  .ct_header .months {
+    font-size: 1.6vw;
+    width: 10%;
+    height: 44%; } }

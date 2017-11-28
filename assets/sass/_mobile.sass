@@ -6,22 +6,41 @@
     float: left
     padding: 15px
 
+@media #{$mobile} 
+    /* For tablets: */
+    .col-sm-1
+         width: $col-1
+    .col-sm-2
+         width: $col-2
+    .col-sm-3
+         width: $col-3
+    .col-sm-4
+         width: $col-4
+    .col-sml-5
+         width: $col-5
+    .col-sm-6
+         width: $col-6
+    .col-sm-7
+         width: $col-7
+    .col-sm-8
+         width: $col-8
+    .col-sm-9
+         width: $col-9
+    .col-sm-10
+         width: $col-10
+    .col-sm-11
+         width: $col-11
+    .col-sm-12
+        width: $col-12
 body
     background-color: lightgrey
     font-family: "Proxima Nova Soft", sans-serif
     margin: 0
-
-img
-    width: 100%
-    background-size: 100% 100%
-    z-index: 0     
-
-#topic
+.topic
     text-align: center
 
-#content
+.content
     margin: 0 30px    
-
     h1
         font-size: 2em
         margin: 15px 5px 0 0    
@@ -32,9 +51,10 @@ img
     box-shadow: 1px 4px 9px rgba(0, 0, 0, 0.5)
     margin-bottom: 30px
 
-header
-    position: relative  
-    span
+.ct_header
+    position: relative      
+    min-height: 147px
+    .months
         background-color: #f66951
         color: white
         font-weight: bolder
@@ -44,48 +64,50 @@ header
         border-radius: 87%
         width: 13%
         text-align: center
-        height: 21%
+        height: 25%
         padding: 4px
         box-sizing: content-box
         right: 15px
         top: 15px
-        time
+        .date
             font-size: 5vw
-    figcaption
+    .photo
         background-color: tomato    
         color: white
         font-weight: bold
         width: 27%
         position: absolute
         z-index: 999
-        bottom: 4px
+        bottom: 0
         font-size: 4vw
         padding: 8px
-
-  
-
-main
+.articles
     padding: 0 1.5em
-    span
+    .titles
         color: #f66951
         font-weight: bolder
-    p
+    .info
         color: grey
 
-footer
+.reactions
     padding: 0 1.5em
     color: grey
-    i
+    .view
         float: left
         margin-right: 10px    
 
-
-#fog
-    background-color: black
-    opacity: 0.2
+.bg
+    background-image: url("../../img/cropped.png")
+    height: 100%
     position: absolute
-    top: 0
     width: 100%
-    height: 98%
-
-
+    background-size: cover
+    background-repeat: no-repeat
+    &::after
+        content: ""
+        background-color: black
+        opacity: 0.2
+        position: absolute
+        top: 0
+        width: 100%
+        height: 99%
